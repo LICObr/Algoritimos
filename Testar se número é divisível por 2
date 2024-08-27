@@ -1,0 +1,17 @@
+programa {
+  funcao inicio(){
+  real a
+  escreva("Digite um valor:\n")
+  leia(a)
+  se(a % 2 == 0){
+    escreva(a," é divisivel por 2\n")
+  }senao{
+    escreva(a," não é divisivel por 2\n")
+  }
+
+escreva("Fim do algoritimo")
+
+
+
+  }
+}
