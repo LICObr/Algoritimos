@@ -1,0 +1,18 @@
+programa {
+  funcao inicio(){
+  real a
+    a=8
+  se(a % 2 == 0){
+      escreva(a," é par")
+  }
+
+
+
+
+
+
+
+
+  }
+}
+
