@@ -1,0 +1,29 @@
+programa{
+  funcao inicio() {
+  real sal, imp
+  escreva("Digite o seu salário: ")
+  leia(sal)
+  se (sal <= 2112.00){
+    imp = 0
+    escreva("O imposto é: 0")
+  }
+  senao se (sal > 2112.00 e sal < 2826.65){
+    imp = (7.5*sal/100) - 158.40
+    escreva("O imposto é: ", imp)
+  }
+  senao se (sal > 2826.66 e sal < 3751.05){
+    imp = (15*sal/100) - 370.40
+    escreva("O imposto é: ", imp)
+  }
+  senao se (sal > 3751.06 e sal < 4664.68){
+    imp = (22.5*sal/100) - 651.73
+    escreva("O imposto é: ", imp)
+  
+  }senao{
+    imp = (sal*27.5/100) - 884.96
+    escreva("O imposto é: ", imp)
+  }
+
+
+  }
+}
