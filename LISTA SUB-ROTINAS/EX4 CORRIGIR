@@ -1,0 +1,32 @@
+//4) Construa um algoritmo que solicite uma frase (mínimo 10 e máximo 50
+//caracteres). Posteriormente, retorne (através de funções) a quantidade de
+//vogais e quantidade de consoantes da frase.
+programa {
+  inclua biblioteca Texto --> t
+  cadeia frase
+  funcao inicio() {
+
+    escreva("Digite uma frase: ")
+    leia(frase)
+
+    se(t.numero_caracteres(frase) < 10 ou t.numero_caracteres(frase) > 50){
+      escreva("(mínimo 10 e máximo 50 caracteres)")
+    }
+    quantidade_V_C()
+  }
+  funcao quantidade_V_C(){
+    inteiro vogais = 0, consoantes = 0,i = 0
+    
+    para(i = 0 ; i < t.numero_caracteres(frase) ; i++){
+      se(frase[i] == 'A' ou frase[i] == 'E' ou frase[i] == 'O' ou frase[i] == 'U'){
+        vogais++
+      }
+      senao{
+        consoantes++
+      }
+    }
+    escreva(vogais," ", consoantes)
+
+
+  }
+}
