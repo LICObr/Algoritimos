@@ -8,6 +8,7 @@ programa {
 
     escreva("Digite uma frase: ")
     leia(frase)
+    frase = t.caixa_alta(frase)
 
     se(t.numero_caracteres(frase) < 10 ou t.numero_caracteres(frase) > 50){
       escreva("(mínimo 10 e máximo 50 caracteres)")
@@ -15,17 +16,19 @@ programa {
     quantidade_V_C()
   }
   funcao quantidade_V_C(){
-    inteiro vogais = 0, consoantes = 0,i = 0
+    inteiro vogais = 0, consoantes = 0, i
+    caracter digito
     
     para(i = 0 ; i < t.numero_caracteres(frase) ; i++){
-      se(frase[i] == 'A' ou frase[i] == 'E' ou frase[i] == 'O' ou frase[i] == 'U'){
+      digito = t.obter_caracter(frase,i)
+      se(digito == "A" ou digito == "E" ou digito == "I" ou digito == "O" ou digito == "U"){
         vogais++
       }
-      senao{
+      senao se(digito > "A" e digito < "Z"){
         consoantes++
       }
     }
-    escreva(vogais," ", consoantes)
+    escreva("vogais: ",vogais," - consoantes: ", consoantes)
 
 
   }
